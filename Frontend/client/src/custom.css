@@ -1,0 +1,79 @@
+/* custom.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f7ff; /* Light blue background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #fff;
+    border-radius: 12px; /* Increased border radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Increased padding */
+    width: 500px; /* Adjusted width */
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #004e92; /* Dark blue heading color */
+  }
+  
+  .input-section {
+    display: flex; /* Display input and button in a row */
+    justify-content: space-between; /* Space evenly */
+    align-items: center;
+    margin-bottom: 20px;
+    
+  }
+
+  input {
+    background-color: whitesmoke;
+    border:2px solid black;
+  }
+  
+  input[type="text"] {
+    width: calc(70% - 10px); /* Adjusted input width */
+    padding: 12px;
+    margin-right: 10px; /* Added margin between input and button */
+    border-radius: 6px;
+    color:black;
+    font-size: 16px;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #005691; /* Darker blue on focus */
+  }
+  
+  button {
+    padding: 12px 24px; /* Increased button padding */
+    border: none;
+    border-radius: 6px;
+    background-color: #0096c7; /* Blue button background */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #005691; /* Darker blue on hover */
+  }
+  
+  .output-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .output-section input[type="text"] {
+    flex: 1;
+    margin-right: 10px; /* Added margin between input and button */
+  }
+  
