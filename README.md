@@ -15,7 +15,7 @@ Follow these steps to set up Trimly locally:
 1. **Clone Repository:**
 
     ```bash
-    git clone https://github.com/your-username/url-shortener.git
+    git clone https://github.com/Muhammad-Owais-Warsi/Trimly.git
     ```
 
 2. **Navigate to Directories and Install Dependencies:**
