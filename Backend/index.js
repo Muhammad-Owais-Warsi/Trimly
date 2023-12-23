@@ -2,12 +2,15 @@ import express, { urlencoded } from "express"
 import mongoose from "mongoose"
 import {v4} from "uuid"
 import cors from "cors"
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-mongoose.connect("mongodb+srv://warsimuhammadowais:pNbwxTe71YRmCZJt@owais.txgrwvv.mongodb.net/")
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const urlSchema = new mongoose.Schema({
     shortId:{
