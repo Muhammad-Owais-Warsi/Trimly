@@ -4,6 +4,8 @@ import {v4} from "uuid"
 import cors from "cors"
 import dotenv from "dotenv";
 
+dotenv.config();
+
 
 dotenv.config();
 
@@ -11,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-mongoose.connect("mongodb+srv://mw1078:lKg5x4KquiPoyQp0@cluster0.dltfpcw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MONGO_URL);
 
 const urlSchema = new mongoose.Schema({
     shortId:{
