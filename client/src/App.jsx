@@ -6,7 +6,7 @@ function App() {
   const [shortUrl, setShortUrl] = useState('');
   const reference = useRef(null);
 
-  const url = `https://trimly-1-1.onrender.com/my/`
+  const url = `https://trimly-1-1.onrender.com/my`
   const generate = () => {
     fetch("https://trimly-1-1.onrender.com", {
       method: 'POST',
@@ -18,7 +18,7 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         let shortId = res.shortId;
-        shortId = `${url}${shortId}`;
+        shortId = `${url}/${shortId}`;
         setShortUrl(shortId);
       });
   }
