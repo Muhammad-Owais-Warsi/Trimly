@@ -36,7 +36,7 @@ const Url = mongoose.model("Url",urlSchema);
 
 
 const generateId = () => {
-    const shortId = v4();
+    const shortId = v4().replace(/-/g, '').substring(0, 10); 
     return shortId;
 }
 
