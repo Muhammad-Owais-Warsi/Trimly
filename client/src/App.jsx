@@ -6,9 +6,9 @@ function App() {
   const [shortUrl, setShortUrl] = useState('');
   const reference = useRef(null);
 
-  const url = `http://localhost:8000/my/`
+  const url = `https://trimly-1-1.onrender.com/my`
   const generate = () => {
-    fetch("http://localhost:8000", {
+    fetch("https://trimly-1-1.onrender.com", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
