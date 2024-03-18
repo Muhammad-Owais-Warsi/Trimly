@@ -10,7 +10,9 @@ dotenv.config();
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin:"http://localhost:5173/"
+}));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 mongoose.connect(process.env.MONGO_URL);
@@ -81,6 +83,6 @@ app.get("/my/:shortId",async (req,res) => {
 
 
 
-app.listen(8000,() => {
+app.listen(process.env.PORT || 4000,() => {
     console.log("server started");
 })

@@ -1,8 +1,0 @@
-services:
-  - name: client
-    buildCommand: npm install && npm run build
-    startCommand: npm start
-
-  - name: backend
-    buildCommand: npm install
-    startCommand: nodemon index.js
