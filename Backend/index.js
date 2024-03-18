@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin:"http://localhost:5173/"
+    origin:"https://trimly-4.onrender.com"
 }));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
