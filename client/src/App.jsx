@@ -4,6 +4,7 @@ import './custom.css'; // Create a separate CSS file for styling
 function App() {
   const [originalUrl, setOriginalUrl] = useState('');
   const [shortUrl, setShortUrl] = useState('');
+  const [customUrl,setCustomUrl] = useState('');
   const reference = useRef(null);
 
   const url = `https://trimly-1-1.onrender.com/my`
@@ -31,15 +32,23 @@ function App() {
   return (
     <div className="container">
       <div className="content">
-        <h1>URL Shortener</h1>
+        <h1>CUSTOM URL</h1>
         <div className="input-section">
+          <input 
+            type="text" 
+            placeholder='Custom URL'
+            value={customUrl}
+            onChange={(e) => setCustomUrl(e.target.value)}
+            className='inputs'
+          />
           <input
             type="text"
             placeholder='Original URL'
             value={originalUrl}
             onChange={(e) => setOriginalUrl(e.target.value)}
+            className='inputs'
           />
-          <button onClick={generate}>Generate</button>
+          <button onClick={generate} className='btn inputs'>Generate</button>
         </div>
         <div className="output-section">
           <input
